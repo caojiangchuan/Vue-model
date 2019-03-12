@@ -30,10 +30,16 @@ export default {
       num: 0
     }
   },
+  created () {
+    // alert(this.$route.params.id)
+  },
   methods: {
     active (item, index) {
       console.log(item, index)
       this.num = index
+      this.$router.push({
+        path: `/active/${index}`
+      })
     }
   }
 }

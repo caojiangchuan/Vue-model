@@ -6,7 +6,18 @@
 
 <script>
 export default {
-  name: 'about'
+  name: 'about',
+  created () {
+    this.Tip()
+  },
+  methods: {
+    Tip () {
+
+    },
+    ser () {
+
+    }
+  }
 }
 </script>
 

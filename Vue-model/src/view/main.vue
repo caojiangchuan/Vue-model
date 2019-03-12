@@ -73,7 +73,6 @@ export default {
   }
   .actives {
     color: darkblue !important;
-
   }
 
 </style>

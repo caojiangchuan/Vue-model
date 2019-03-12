@@ -50,7 +50,12 @@ export default new Router({
       ]
 
     },
+    {
+      path: '/active/:id',
+      name: 'active',
+      component: resolve => require(['../view/active'], resolve)
 
+    }
 
   ]
 })
