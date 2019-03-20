@@ -10,7 +10,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/h5Gateway': {
+        target: 'http://10.100.200.66:8080/',
+        changeOrigin: true,
+        pathRewrite: { '^/h5Gateway': '/h5Gateway-1.0.0' }
+      }
+
+    },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST

@@ -55,6 +55,12 @@ export default new Router({
       name: 'active',
       component: resolve => require(['../view/active'], resolve)
 
+    },
+    {
+      path: '/echarts',
+      name: 'echarts',
+      component: resolve => require(['../components/echats/echarts'], resolve)
+
     }
 
   ]

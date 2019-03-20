@@ -17,10 +17,29 @@ export default {
       list: [
         {item: '首页'},
         {item: '组件'},
-        {item: '功能'},
+        {item: '图表'},
         {item: '我的 '}
       ],
       num: 0
+    }
+  },
+  created () {
+    switch (this.$route.name) {
+      case 'index':
+        this.num = 0
+        break
+      case 'component':
+        this.num = 1
+        break
+      case 'function':
+        this.num = 2
+        break
+      case 'my':
+        this.num = 3
+        break
+      case 'about':
+        this.num = 3
+        break
     }
   },
   methods: {
@@ -30,6 +49,7 @@ export default {
         case 0:
           this.$router.push({
             path: 'index'
+
           })
           break
         case 1:
@@ -54,11 +74,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   .main {
     width: 100%;
     display: flex;
     position: fixed;
+    z-index: 1000;
     bottom: 0;
     height: 50px;
     line-height: 50px;
