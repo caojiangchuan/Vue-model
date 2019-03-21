@@ -5,21 +5,21 @@
     <!--<input type="text"  class="ipt" @blur="sj"/>-->
 
   <!--</div>-->
-  <!--<div id="example-1">-->
-    <!--<button @click="show = !show">-->
-      <!--Toggle render-->
-    <!--</button>-->
-    <!--<div style="position: absolute; left: 50px;">-->
-    <!--<transition name="slide"-->
-              <!--:duration=5000-->
-                <!--enter-active-class="animated hinge"-->
+  <div id="example-1">
+    <button @click="show = !show">
+      Toggle render
+    </button>
+    <div style="position: absolute; left: 50px;">
+    <transition name="slide"
+              :duration=5000
+                enter-active-class="animated hinge"
 
-    <!--&gt;-->
-      <!--<p v-if="show">yes</p>-->
-    <!--</transition>-->
-    <!--</div>-->
+    >
+      <p v-if="show">yes</p>
+    </transition>
+    </div>
 
-    <!--</div>-->
+    </div>
 <div :class="[this.$store.state.isShow ? 'loading' : '']"></div>
 
   <button @click="getData">请求数据</button>
@@ -100,10 +100,10 @@ export default {
     transition: 1s;
   }
 }
-/*.slide-enter-to{*/
- /*animation-duration: 2.5s;*/
-  /*animation-iteration-count:infinite;//定义执行的次数 transtion中的duration定义执行过程的时间*/
-/*}*/
+.slide-enter-to{
+ animation-duration: 2.5s;
+  animation-iteration-count:infinite;//定义执行的次数 transtion中的duration定义执行过程的时间
+}
 /*.slide-enter-active {*/
   /*transition: all 10s ease;*/
 /*}*/
